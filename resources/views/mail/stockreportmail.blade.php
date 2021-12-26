@@ -10,12 +10,12 @@
 <div class="container">
         <div class="row">
             <div class="col-xl-6 col-lg-6 col-sm-12 m-auto">
-                <p>Dear Admin,</p>
+                <p>Dear Customer,</p>
                 <br/>
-                <p>Attach with the stock report.</p>
+                <p>Please Find the Attach of stock report.</p>
                 <br/>
                 <p> Best Regards</p>
-                <p> Inventory Team </p>
+                <p> Code2Creation Team </p>
             </div>
         </div>
     </div>

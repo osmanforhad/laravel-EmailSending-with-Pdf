@@ -30,7 +30,7 @@ class SendPDFMail extends Mailable
     public function build()
     {
         return $this->from(env('MAIL_FROM_ADDRESS'))
-               ->subject('Stock Report - Laravel Tutorial')
+               ->subject('Stock Report - Code2Creation')
                ->view('mail.stockreportmail')
                ->attachData($this->pdf->output(), 'stock_report.pdf');
     }
