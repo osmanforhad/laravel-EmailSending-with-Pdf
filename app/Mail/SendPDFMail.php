@@ -10,15 +10,16 @@ use Illuminate\Queue\SerializesModels;
 class SendPDFMail extends Mailable
 {
     use Queueable, SerializesModels;
+    protected $pdf;
 
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct($pdf)
     {
-        //
+        $this->pdf = $pdf;
     }
 
     /**
@@ -28,6 +29,9 @@ class SendPDFMail extends Mailable
      */
     public function build()
     {
-        return $this->view('view.name');
+        return $this->from(env('MAIL_FROM_ADDRESS'))
+               ->subject('Stock Report - Laravel Tutorial')
+               ->view('mail.stockreportmail')
+               ->attachData($this->pdf->output(), 'stock_report.pdf');
     }
 }
